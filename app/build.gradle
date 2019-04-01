@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "cnm.edu.deepdive.concertfinder"
+        applicationId "cnm.edu.deepdive.matchmaker"
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1

@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.matchmaker.model;
+package edu.cnm.deepdive.matchmaker.controller;
 
 
 import android.os.Bundle;
@@ -12,19 +12,13 @@ import edu.cnm.deepdive.matchmaker.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UserFragment extends Fragment {
-
-
-  public UserFragment() {
-    // Required empty public constructor
-  }
-
+public class MessageFragment extends Fragment {
 
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
     // Inflate the layout for this fragment
-    return inflater.inflate(R.layout.fragment_user, container, false);
+    return inflater.inflate(R.layout.fragment_message, container, false);
   }
 
 }
