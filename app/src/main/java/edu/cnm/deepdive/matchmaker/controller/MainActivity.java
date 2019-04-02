@@ -9,14 +9,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 import edu.cnm.deepdive.matchmaker.R;
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-  private TextView mTextMessage;
+  private TextView textMessage;
 
-  private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+  private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener
       = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
     @Override
@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         case R.id.fragment_matches:
           loadFragment(new MatchesFragment(), R.id.fragment_container, "matches", null);
           break;
+        case R.id.fragment_messages:
+          loadFragment(new MessageFragment(), R.id.fragment_container, "message", null);
+          break;
       }
       return false;
     }
@@ -39,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     setContentView(R.layout.activity_main);
 
-
     BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-    navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
 
     Fragment fragmentHome = new HomeFragment();

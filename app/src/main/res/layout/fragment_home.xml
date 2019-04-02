@@ -3,7 +3,7 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context="edu.cnm.deepdive.matchmaker.controller.HomeFragment"
-  android:background="#fbf902cb">
+  android:background="@color/colorPrimaryDark">
 
   <!-- TODO: Update blank fragment layout -->
   <TextView

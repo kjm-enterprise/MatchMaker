@@ -3,7 +3,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   tools:shownIn="fragment_container">
 
-  <group android:checkableBehavior="single">
+<group android:checkableBehavior="single">
 
   <item
     android:id="@+id/fragment_home"
@@ -21,6 +21,6 @@
     android:icon="@drawable/ic_message"
     android:title="@string/messages"/>
 
-  </group>
+</group>
 
 </menu>
