@@ -3,4 +3,6 @@
   <color name="colorPrimary">#65666b</color>
   <color name="colorPrimaryDark">#be0426</color>
   <color name="colorAccent">#ff4081</color>
+  <color name="navigatorItem">#65666b</color>
+
 </resources>

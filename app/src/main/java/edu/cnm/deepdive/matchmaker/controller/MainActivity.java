@@ -1,6 +1,5 @@
 package edu.cnm.deepdive.matchmaker.controller;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -10,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 import edu.cnm.deepdive.matchmaker.R;
-import org.w3c.dom.Text;
+import edu.cnm.deepdive.matchmaker.service.FragmentService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,49 +20,49 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-      Bundle args = new Bundle();
-      Context context = getApplicationContext();
-
+      FragmentService fragmentService = FragmentService.getInstance();
+      boolean handled = true;
       switch (item.getItemId()) {
-        case R.id.fragment_home:
-          loadFragment(new HomeFragment(), R.id.fragment_container, "home", null);
+        case R.id.fragment_find_someone:
+         loadFragment(new FindSomeoneFragment(),"find_someone");
           break;
         case R.id.fragment_matches:
-          loadFragment(new MatchesFragment(), R.id.fragment_container, "matches", null);
+          loadFragment(new MatchesFragment(), "matches");
+         /* textMessage.setText(R.string.matches);*/
           break;
         case R.id.fragment_messages:
-          loadFragment(new MessageFragment(), R.id.fragment_container, "message", null);
+          loadFragment(new MessageFragment(), "message");
+          /*textMessage.setText(R.string.messages );*/
           break;
+          default:
+            handled= false;
       }
-      return false;
+      return handled;
     }
   };
+
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
     setContentView(R.layout.activity_main);
 
     BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
     navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
 
-    Fragment fragmentHome = new HomeFragment();
+    Fragment fragmentFindSomeone = new FindSomeoneFragment();
 
     FragmentManager manager = getSupportFragmentManager();
     FragmentTransaction transaction = manager.beginTransaction();
-    transaction.add(R.id.fragment_container, fragmentHome, "home");
+    transaction.add(R.id.fragment_container, fragmentFindSomeone, "find_someone");
     transaction.commit();
   }
 
-  public void loadFragment(Fragment fragment, int container, String tag, Bundle args) {
+  public void loadFragment(Fragment fragment, String tag) {
     FragmentManager manager = getSupportFragmentManager();
-    if (args != null) {
-      fragment.setArguments(args);
-    }
     manager.beginTransaction()
-        .add(container, fragment, tag)
+        .add(R.id.fragment_container,fragment, tag)
         .commit();
   }
 

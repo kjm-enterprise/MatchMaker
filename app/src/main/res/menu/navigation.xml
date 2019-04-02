@@ -3,12 +3,11 @@
   xmlns:tools="http://schemas.android.com/tools"
   tools:shownIn="fragment_container">
 
-<group android:checkableBehavior="single">
 
   <item
-    android:id="@+id/fragment_home"
+    android:id="@+id/fragment_find_someone"
     android:icon="@drawable/ic_home_black_24dp"
-    android:title="@string/title_home"
+    android:title="Find a Gamer"
     />
 
   <item
@@ -21,6 +20,6 @@
     android:icon="@drawable/ic_message"
     android:title="@string/messages"/>
 
-</group>
+
 
 </menu>
