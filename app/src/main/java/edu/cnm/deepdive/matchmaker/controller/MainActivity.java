@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
           loadFragment(new MessageFragment(), "message");
           /*textMessage.setText(R.string.messages );*/
           break;
+        case R.id.fragment_user_profile:
+          loadFragment(new UserProfileFragment(), "user_profile");
           default:
             handled= false;
       }

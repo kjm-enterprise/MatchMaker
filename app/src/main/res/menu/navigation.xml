@@ -20,6 +20,10 @@
     android:icon="@drawable/ic_message"
     android:title="@string/messages"/>
 
+  <item
+    android:id="@+id/fragment_user_profile"
+    android:icon="@drawable/ic_person"
+    android:title="User Profile"/>
 
 
 </menu>
