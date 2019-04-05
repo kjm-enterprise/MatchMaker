@@ -7,6 +7,11 @@
 
 **Our Team**
 
+James Mattos
+
+Kanyon Wyman
+
+Michael Sanchez
 
 **Functional Inventory**
 
