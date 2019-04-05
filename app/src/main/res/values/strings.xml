@@ -3,12 +3,12 @@
   <string name="title_home">Home</string>
   <string name="title_dashboard">Dashboard</string>
   <string name="title_notifications">Notifications</string>
-
-  <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="tournaments">Tournaments</string>
   <string name="messages">Messages</string>
   <string name="meetups">Meetups</string>
   <string name="matches">Matches</string>
   <string name="client_id">383279731938-nhopd6jkeaftj472s0reej7u3qpkefqo.apps.googleusercontent.com</string>
+  <string name="sign_out">sign out</string>
+  <string name="sign_in_fail">Unable to sign in with provided credentials</string>
 </resources>

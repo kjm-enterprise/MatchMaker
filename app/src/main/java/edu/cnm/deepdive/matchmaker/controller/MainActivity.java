@@ -1,15 +1,19 @@
 package edu.cnm.deepdive.matchmaker.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 import edu.cnm.deepdive.matchmaker.R;
 import edu.cnm.deepdive.matchmaker.service.FragmentService;
+import edu.cnm.deepdive.matchmaker.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -66,6 +70,35 @@ public class MainActivity extends AppCompatActivity {
     manager.beginTransaction()
         .add(R.id.fragment_container,fragment, tag)
         .commit();
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.options_menu, menu);
+    return true;
+  }
+
+  @Override
+  public boolean onOptionsItemSelected(MenuItem item) {
+    boolean handeled = true;
+    if (item.getItemId() == R.id.sign_out) {
+      signOut();
+    } else {
+      handeled = super.onOptionsItemSelected(item);
+    }
+    return handeled;
+  }
+
+  private void signOut() {
+    GoogleSignInService.getInstance().getClient()
+        .signOut()
+        .addOnCompleteListener(this, (task -> {
+          GoogleSignInService.getInstance().setAccount(null);
+          Intent intent = new Intent(this, LoginActivity.class);
+          intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+          startActivity(intent);
+        }));
   }
 
 }
