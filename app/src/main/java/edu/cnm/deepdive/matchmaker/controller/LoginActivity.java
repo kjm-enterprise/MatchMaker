@@ -43,8 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         GoogleSignInAccount account = task.getResult(ApiException.class);
         GoogleSignInService.getInstance().setAccount(account);
         switchToMain();
-      } catch (ApiException e) {
-        Toast.makeText(this, R.string.sign_in_fail, Toast.LENGTH_LONG)
+      } catch (ApiException e) { Toast.makeText(this, R.string.sign_in_fail, Toast.LENGTH_LONG)
             .show();
       }
     }

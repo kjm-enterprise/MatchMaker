@@ -32,16 +32,15 @@ public class MainActivity extends AppCompatActivity {
           break;
         case R.id.fragment_matches:
           loadFragment(new MatchesFragment(), "matches");
-         /* textMessage.setText(R.string.matches);*/
           break;
         case R.id.fragment_messages:
           loadFragment(new MessageFragment(), "message");
-          /*textMessage.setText(R.string.messages );*/
           break;
         case R.id.fragment_user_profile:
           loadFragment(new UserProfileFragment(), "user_profile");
-          default:
-            handled= false;
+          break;
+        default:
+          handled= false;
       }
       return handled;
     }
