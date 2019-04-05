@@ -2,83 +2,123 @@ package edu.cnm.deepdive.matchmaker.model.entity;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.media.Image;
 import android.support.annotation.NonNull;
+import java.util.UUID;
+import com.google.gson.annotations.Expose;
 
 @Entity
 public class User {
 
-  @PrimaryKey
-  @NonNull
-  long _id;
-  String _name;
-  String _email;
-  Long _preferences;
-  Long _messages;
-  Long matches;
+  @Expose
+  public UUID id;
+  @Expose
+  public String googleSubjectId;
+  @Expose
+  public String firstName;
+  @Expose
+  public  String lastName;
+  @Expose
+  public String email;
+  @Expose
+  public Enum preferences;
+  @Expose
+  public Long matchedUsers;
+  @Expose
+  public Long messageId;
+  @Expose
+  public String userBio;
+  @Expose
+  public Image userImage;
 
-  public User() {
+  public Long imageId;
+
+  public UUID getId() {
+    return id;
   }
 
-  public User(int _id, Long _messages, String _name, String _email, Long _preferences, Long matches) {
-    this._id = _id;
-    this._email = _email;
-    this._name = _name;
-    this._preferences = _preferences;
-    this._messages = _messages;
-    this.matches = matches;
+  public void setId(UUID id) {
+    this.id = id;
   }
 
-  public User(Long _messages, String _name, String _email) {
-    this._messages = _messages;
-    this._name = _name;
-    this._email = _email;
+  public String getGoogleSubjectId() {
+    return googleSubjectId;
   }
 
-  public long get_id() {
-    return _id;
+  public void setGoogleSubjectId(String googleSubjectId) {
+    this.googleSubjectId = googleSubjectId;
   }
 
-  public void set_id(long _id) {
-    this._id = _id;
+  public String getFirstName() {
+    return firstName;
   }
 
-  public String get_name() {
-    return _name;
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
   }
 
-  public void set_name(String _name) {
-    this._name = _name;
+  public String getLastName() {
+    return lastName;
   }
 
-  public String get_email() {
-    return _email;
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 
-  public void set_email(String _email) {
-    this._email = _email;
+  public String getEmail() {
+    return email;
   }
 
-  public Long get_preferences() {
-    return _preferences;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
-  public void set_preferences(Long _preferences) {
-    this._preferences = _preferences;
+  public Enum getPreferences() {
+    return preferences;
   }
 
-  public Long get_messages() {
-    return _messages;
+  public void setPreferences(Enum preferences) {
+    this.preferences = preferences;
   }
 
-  public void set_messages(Long _messages) {
-    this._messages = _messages;
+  public Long getMatchedUsers() {
+    return matchedUsers;
   }
 
-  public Long getMatches() {
-    return matches;
+  public void setMatchedUsers(Long matchedUsers) {
+    this.matchedUsers = matchedUsers;
   }
 
-  public void setMatches(Long matches) {
-    this.matches = matches;
+  public Long getMessageId() {
+    return messageId;
   }
+
+  public void setMessageId(Long messageId) {
+    this.messageId = messageId;
+  }
+
+  public String getUserBio() {
+    return userBio;
+  }
+
+  public void setUserBio(String userBio) {
+    this.userBio = userBio;
+  }
+
+  public Image getUserImage() {
+    return userImage;
+  }
+
+  public void setUserImage(Image userImage) {
+    this.userImage = userImage;
+  }
+
+  public Long getImageId() {
+    return imageId;
+  }
+
+  public void setImageId(Long imageId) {
+    this.imageId = imageId;
+  }
+
 }
