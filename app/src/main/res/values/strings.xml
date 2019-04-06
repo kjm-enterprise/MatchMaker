@@ -11,4 +11,5 @@
   <string name="client_id">383279731938-jlr3bgs9rn95dkoca4ithj6m2ousejak.apps.googleusercontent.com</string>
   <string name="sign_out">sign out</string>
   <string name="sign_in_fail">Unable to sign in with provided credentials</string>
+  <string name="msg_token_fmt">PlaceHolder</string>
 </resources>

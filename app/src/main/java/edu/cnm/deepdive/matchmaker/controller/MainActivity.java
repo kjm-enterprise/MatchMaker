@@ -2,21 +2,30 @@ package edu.cnm.deepdive.matchmaker.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 import edu.cnm.deepdive.matchmaker.R;
 import edu.cnm.deepdive.matchmaker.service.FragmentService;
 import edu.cnm.deepdive.matchmaker.service.GoogleSignInService;
 
 public class MainActivity extends AppCompatActivity {
 
+  private static final String TAG = "MainActivity";
   private TextView textMessage;
 
   private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener
@@ -28,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
       boolean handled = true;
       switch (item.getItemId()) {
         case R.id.fragment_find_someone:
-         loadFragment(new FindSomeoneFragment(),"find_someone");
+          loadFragment(new FindSomeoneFragment(), "find_someone");
           break;
         case R.id.fragment_matches:
           loadFragment(new MatchesFragment(), "matches");
@@ -40,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
           loadFragment(new UserProfileFragment(), "user_profile");
           break;
         default:
-          handled= false;
+          handled = false;
       }
       return handled;
     }
@@ -55,19 +64,19 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
     navigation.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
-
     Fragment fragmentFindSomeone = new FindSomeoneFragment();
 
     FragmentManager manager = getSupportFragmentManager();
     FragmentTransaction transaction = manager.beginTransaction();
     transaction.add(R.id.fragment_container, fragmentFindSomeone, "find_someone");
     transaction.commit();
+
   }
 
   public void loadFragment(Fragment fragment, String tag) {
     FragmentManager manager = getSupportFragmentManager();
     manager.beginTransaction()
-        .add(R.id.fragment_container,fragment, tag)
+        .add(R.id.fragment_container, fragment, tag)
         .commit();
   }
 
@@ -98,6 +107,31 @@ public class MainActivity extends AppCompatActivity {
           intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
           startActivity(intent);
         }));
+  }
+
+
+  public void onClick(View v) {
+    // Get token
+    // [START retrieve_current_token]
+    FirebaseInstanceId.getInstance().getInstanceId()
+        .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+          @Override
+          public void onComplete(@NonNull Task<InstanceIdResult> task) {
+            if (!task.isSuccessful()) {
+              Log.w(TAG, "getInstanceId failed", task.getException());
+              return;
+            }
+
+            // Get new Instance ID token
+            String token = task.getResult().getToken();
+
+            // Log and toast
+            String msg = getString(R.string.msg_token_fmt, token);
+            Log.d(TAG, msg);
+            Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+          }
+        });
+    // [END retrieve_current_token]
   }
 
 }
