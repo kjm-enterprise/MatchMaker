@@ -23,6 +23,21 @@ import edu.cnm.deepdive.matchmaker.R;
 import edu.cnm.deepdive.matchmaker.service.FragmentService;
 import edu.cnm.deepdive.matchmaker.service.GoogleSignInService;
 
+
+/**
+ *
+ *Copyright 2019 KJM Enterprise
+ *
+ *Licensed under the Apache Licences Version 2.0 (the "License"); you may not use
+ *this file except in compliance with the Licenses.
+
+ *[Link To License](http://www.apache.org/licenses/LICENSE-2.0)
+
+ *Unless required by applicable law or agreed to in writing, software distributed under the License
+ *is distributed on an as is basis, without warranties or conditions of any kind, wither express or
+ *implied. See the language governing permissions and limitations under the License.
+
+ */
 public class MainActivity extends AppCompatActivity {
 
   private static final String TAG = "MainActivity";
@@ -70,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction transaction = manager.beginTransaction();
     transaction.add(R.id.fragment_container, fragmentFindSomeone, "find_someone");
     transaction.commit();
+
+    FirebaseInstanceId.getInstance().getToken();
 
   }
 

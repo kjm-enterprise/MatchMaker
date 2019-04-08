@@ -8,9 +8,9 @@ import com.facebook.stetho.inspector.protocol.module.Worker;
 
 public class MyWorker extends Worker {
 
-  private static final String TAG = "MyWorker";
+/*  private static final String TAG = "MyWorker";
 
-/*  public MyWorker(@NonNull Context appContext, @NonNull WorkerParameters workerParams) {
+  public MyWorker(@NonNull Context appContext, @NonNull WorkerParameters workerParams) {
     super(appContext, workerParams);
   }
 
