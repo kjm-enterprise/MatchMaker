@@ -1,14 +1,50 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   tools:context="edu.cnm.deepdive.matchmaker.controller.MessageFragment"
   android:background="@color/colorPrimary">
 
-  <!-- TODO: Update blank fragment layout -->
-  <TextView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="Matches FRAGMENT"/>
 
-</FrameLayout>
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    </LinearLayout>
+  </ScrollView>
+  <EditText
+    android:id="@+id/editText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Test"
+    android:ems="10"
+    android:inputType="textEmailAddress"/>
+  <EditText
+    android:id="@+id/editText2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="textEmailAddress"
+    app:layout_constraintLeft_toLeftOf="@+id/editText"
+    app:layout_constraintTop_toBottomOf="@+id/editText"/>
+  <EditText
+    android:id="@+id/editText3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="textEmailAddress"
+    app:layout_constraintLeft_toLeftOf="@+id/editText2"
+    app:layout_constraintTop_toBottomOf="@+id/editText2"/>
+  <EditText
+    android:id="@+id/editText4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:inputType="textEmailAddress"
+    app:layout_constraintLeft_toLeftOf="@+id/editText3"
+    app:layout_constraintTop_toBottomOf="@+id/editText3"/>
+</android.support.constraint.ConstraintLayout>

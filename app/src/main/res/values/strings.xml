@@ -17,4 +17,6 @@
   <string name="copyright">Copyright KJM Enterprise</string>
   <string name="welcome_sign_in">Welcome To MatchMaker</string>
   <string name="welcome_tag_line">One Up Your Gaming Network</string>
+  <string name="match">Match</string>
+  <string name="pass">Pass</string>
 </resources>
