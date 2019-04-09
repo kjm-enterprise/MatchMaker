@@ -1,14 +1,42 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context="edu.cnm.deepdive.matchmaker.controller.UserProfileFragment"
-  android:background="#53ff47">
+  android:background="user_profile_settings">
 
 
-  <TextView
+  <ImageView
+    android:id="@+id/imageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:src="@drawable/james_match_maker"/>
+
+  <android.support.design.widget.TextInputLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:text="@string/hello_blank_fragment"/>
+    android:layout_height="wrap_content">
 
-</FrameLayout>
+    <android.support.design.widget.TextInputEditText
+      android:id="@+id/user_settings_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+
+      android:hint="@string/name_jimmothy"/>
+    <android.support.design.widget.TextInputEditText
+      android:id="@+id/user_settings_bio"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/bio_jimmthy"/>
+    <android.support.design.widget.TextInputEditText
+      android:id="@+id/user_settings_preferences"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:hint="@string/preferences_jimmothy"/>
+
+  </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>

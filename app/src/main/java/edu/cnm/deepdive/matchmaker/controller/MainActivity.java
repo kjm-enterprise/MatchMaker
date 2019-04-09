@@ -38,6 +38,7 @@ import edu.cnm.deepdive.matchmaker.service.GoogleSignInService;
  *implied. See the language governing permissions and limitations under the License.
 
  */
+
 public class MainActivity extends AppCompatActivity {
 
   private static final String TAG = "MainActivity";
