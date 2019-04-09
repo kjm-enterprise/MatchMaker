@@ -30,7 +30,9 @@ Michael Sanchez - Front End
 
 **Devices**
 
+
 **Emulators**
+
 
 ##User Stories
 
@@ -68,7 +70,7 @@ Used to implement Google SignIn on the app
 
 [Google Firebase](https://github.com/firebase/)
 
-Intended use was to allow users to message between eachother. 
+Intended use was to allow users to message between each other. 
 
 
 ##Copyrights & licenses
@@ -85,12 +87,39 @@ is distributed on an as is basis, without warranties or conditions of any kind, 
 implied. See the language governing permissions and limitations under the License. 
 
 ##Deployment Instructions
-To clone this app, you need to navigate to the projects [front end github page](https://github.com/kjm-enterprise/MatchMaker).
-Once you have landed on the git hub page select the green "Clone or download" button in the top right corner.
-Copy the key to your clipboard and open up your IDE.  Once you launch your IDE 
+Step 1 - [Clone Git Repository](https://github.com/kjm-enterprise/MatchMaker) 
+
+Step 2 - When creating a new project clone the project from the cloned link generated in the Git Repo for MatchMaker.
+
+Step 3 - DO NOT OPEN THE project when prompted to. Keep the project closed and select the import option.
+
+Step 4 - Then import the project from Maven and ensure that the Java language level is set at 1.8.
+
+Step 5 - In the dropdown next to the run and debug symbols, create an app configuration and call it "app". This will allow you to build the app fully.
+
+Step 6 - Download a google-services.json file of your own to obtain a key to utilize firebase messaging. 
+those steps [can be found here](https://firebase.google.com/docs/android/setup).
+
+Step 7 - Run the project and your app should be up and running.
 
 ##User Instructions
 
+1) Launch the app
+
+2) Sign in with a valid google account.  If you do not have a google account [click here to sign up](https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp&nogm=true). 
+
+3) After signing in you will be prompted to a screen showing you first match option. The option
+will either allow you to attempt to match with the other user or pass on the user.  You will only
+match with the user if the other user has the same mutual desire to match with you. 
+
+4) After you have a match with a user, they will be stored in your "Matches" tab in the button below.  Eventually 
+this feature will let you recall the information that was presented to you upon first matching.
+
+5) If you would like to message your match you may do so within the messaging function of the app. This 
+will allow you to set up communication together to actually game together! 
+
+6) The last item to explore is your "User Profile" which will eventually allow ou to set your different
+gaming consoles and allow you to change your profile picture that is shown to others. 
 
 ##Current App Status
 
@@ -101,3 +130,4 @@ Copy the key to your clipboard and open up your IDE.  Once you launch your IDE
 
 
 ##GitHub Link
+
