@@ -42,7 +42,7 @@ Michael Sanchez - Front End
 
 [Back End README.md placeholder!!!!](https://photricity.com/flw/ajax/)
 
-[Front End Wire Frame]()
+[Wire Frame](docs/wireFrameMatchMaker.png)
 
 [ERD Front End]()
 
@@ -131,5 +131,5 @@ gaming consoles and allow you to change your profile picture that is shown to ot
 **Aesthetic and Cosmetic Improvements**
 
 
-## GitHub Link
 
+**[GitHub Link](https://kjm-enterprise.github.io/MatchMaker/)**
