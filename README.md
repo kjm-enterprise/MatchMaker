@@ -1,4 +1,3 @@
-# MatchMaker 
 
 ## App Overview
 
