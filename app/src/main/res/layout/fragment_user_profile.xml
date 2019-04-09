@@ -20,12 +20,6 @@
       android:text="@string/profile_settings"
       android:textAlignment="center"/>
 
-    <ImageView
-      android:id="@+id/imageView2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:src="@drawable/james_match_maker"/>
-
     <android.support.design.widget.TextInputLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent">
@@ -55,15 +49,15 @@
       android:layout_height="wrap_content"
       android:text="@string/save_changes"/>
     <Button
-      android:id="@+id/discard_changes"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:text="@string/discard_changes"/>
-    <Button
       android:id="@+id/delete_account"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="@string/delete_account"/>
+    <Button
+      android:id="@+id/change_profile_photo"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="@string/change_profile_photo"/>
 
   </LinearLayout>
 
