@@ -1,6 +1,6 @@
-#MatchMaker 
+# MatchMaker 
 
-##App Overview
+## App Overview
 
 **Why Matchmaker?**
 
@@ -24,7 +24,8 @@ Michael Sanchez - Front End
 
 **External Web Services**
 
-##Testing
+
+## Testing
 
 
 
@@ -34,10 +35,10 @@ Michael Sanchez - Front End
 **Emulators**
 
 
-##User Stories
+## User Stories
 
 
-##Technical & Documentation Links
+## Technical & Documentation Links
 
 [Back End README.md placeholder!!!!](https://photricity.com/flw/ajax/)
 
@@ -54,7 +55,7 @@ Michael Sanchez - Front End
 [App Instructions PlaceHolder](https://bit.ly/2qldXyP)
 
 
-##Third Party Libraries & Services
+## Third Party Libraries & Services
 
 [Google GSON](https://github.com/google/gson)
 
@@ -73,7 +74,7 @@ Used to implement Google SignIn on the app
 Intended use was to allow users to message between each other. 
 
 
-##Copyrights & licenses
+## Copyrights & licenses
 
 Copyright 2019 KJM Enterprise 
 
@@ -86,7 +87,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
 is distributed on an as is basis, without warranties or conditions of any kind, wither express or 
 implied. See the language governing permissions and limitations under the License. 
 
-##Deployment Instructions
+## Deployment Instructions
+
 Step 1 - [Clone Git Repository](https://github.com/kjm-enterprise/MatchMaker) 
 
 Step 2 - When creating a new project clone the project from the cloned link generated in the Git Repo for MatchMaker.
@@ -102,7 +104,7 @@ those steps [can be found here](https://firebase.google.com/docs/android/setup).
 
 Step 7 - Run the project and your app should be up and running.
 
-##User Instructions
+## User Instructions
 
 1) Launch the app
 
@@ -121,13 +123,13 @@ will allow you to set up communication together to actually game together!
 6) The last item to explore is your "User Profile" which will eventually allow ou to set your different
 gaming consoles and allow you to change your profile picture that is shown to others. 
 
-##Current App Status
+## Current App Status
 
 
-##Stretch Goals
+## Stretch Goals
 
 **Aesthetic and Cosmetic Improvements**
 
 
-##GitHub Link
+## GitHub Link
 
