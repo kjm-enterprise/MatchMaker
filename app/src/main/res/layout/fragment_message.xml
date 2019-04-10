@@ -8,5 +8,9 @@
     tools:context="edu.cnm.deepdive.matchmaker.controller.MessageFragment"
     android:background="@color/colorPrimary">
 
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="Messages"/>
 
 </android.support.constraint.ConstraintLayout>

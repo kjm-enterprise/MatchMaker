@@ -19,23 +19,80 @@ Michael Sanchez - Front End
 
 **Functional Inventory**
 
-
+Currently the app is mostly cosmetic.  The app does not actually do what it is 
+intended to do, however, the overall concept is shown in the app. 
 
 **External Web Services**
 
+Currently the only external web service fully implemented is [google sign in 
+service](https://github.com/googlesamples/google-services/tree/master/android/signin).
+This eventually would be used to tie user information to the account.  
+   
 
 ## Testing
 
-
+**NOTE*** app was kept in portrait mode.
 
 **Devices**
 
+Motorola G6 API 26 - On this device it seemed to work functionally okay. 
+The app was able to jump from correct fragment to correct fragment.
 
 **Emulators**
 
+Nexus 5X API 24 - On this emulator it seemed to work functionally okay. 
+The app was able to jump from correct fragment to correct fragment.
+
+Samsung SM - G930U- On this emulator it seemed to work functionally okay. 
+The app was able to jump from correct fragment to correct fragment.
 
 ## User Stories
 
+**PC Gamer:**
+ 
+The PC Gamer, is looking for more competitive matches and partners
+to game with.  The PC Gamer wants make money through gaming tournaments,
+and wants to meet like minded gamers. If ever the PC Gamer needs someone
+to tryout and be a key part of a team in a professional scene, they can
+search and easily set up tryouts.  They intend on using the Matchmaking
+app for just that! 
+
+
+**Console Gamer:** 
+
+The console gamer wants to matchmake with friends that have the 
+same console as them to play at similar levels as each other. Currently, 
+the console gamer has a few select friends that can only play at certain 
+times.  The console game would utilize the matchmaking feature to increase
+their friend circle, and ability to play with other console players.
+Whether they need a partner to spar with, or a fifth person to jump in a
+squad to beat a raid boss, the matchmaking app can help them do what they need.
+
+**Casual Gamer:** 
+
+The Casual Gamer is someone whose idea of fun is not the enjoyment of
+showing other people their ability to out-smart and out-play them,
+but rather laying back and playing a game that maybe revolves more around
+figuring something out with a group of friends. Maybe this person is
+older and can’t keep up with the reaction time of the younger Gamers 
+that dominate the market. With matchmaker, they can find a group of people
+just like them and not have to worry about other players not giving them a 
+chance to even play.
+
+**Avid Gamer:**
+ 
+The avid gamer is a passionate about what their gaming.  They take it very 
+seriously and want to match with gamers that are at their very best, 
+so that they too can be better.  They don’t want any n00bs up in their 
+matches. Avid gamers take pride in their machines and want to flaunt it.
+
+**Lover Lurkers:** 
+
+Since the gamers are also matching with like minded gamers,
+this could also will be a platform for sparking a relationship with
+another gamer (although this isn’t the intended purpose, but love happens)
+. This user, may want to find a companion that they can not only play their
+ own version of Smash, but also play video games with. 
 
 ## Technical & Documentation Links
 
@@ -43,15 +100,12 @@ Michael Sanchez - Front End
 
 [Wire Frame](docs/wireFrameMatchMaker.png)
 
-[ERD Front End]()
+[ERD Front End](docs/erd_%20matchmaker_android.png)
 
-[DDL Placeholder](https://photricity.com/flw/ajax/)
+[DDL Placeholder]()
 
-[Front End JavaDoc Placeholder](https://bit.ly/2qldXyP)
+[Front End JavaDoc Placeholder]()
 
-[Building The App PlaceHolder](https://bit.ly/2qldXyP)
-
-[App Instructions PlaceHolder](https://bit.ly/2qldXyP)
 
 
 ## Third Party Libraries & Services
@@ -124,11 +178,27 @@ gaming consoles and allow you to change your profile picture that is shown to ot
 
 ## Current App Status
 
+Currently the app is mostly just a cosmetic approach of what we would hope the 
+functionality could perform. The app has google sign in authentication and 
+is navigational through its main fragments in the bottom nav bar only. 
 
 ## Stretch Goals
 
+We would like to have the app fully functional and complete so users could
+actually match with one another.  Furthermore, we would like for the users to
+have the ability to message back and forth utilizing Firebase messaging. 
+
 **Aesthetic and Cosmetic Improvements**
 
+Aesthetically we would like to make the following improvments:
+
+* Swipe right or left for matching or passing
+
+* User ability to have multiple images that they can upload
+
+* A clear messaging system that is styled perfectly
+
+* Recycler view of messages received and matches.
 
 
 **[GitHub Link](https://kjm-enterprise.github.io/MatchMaker/)**

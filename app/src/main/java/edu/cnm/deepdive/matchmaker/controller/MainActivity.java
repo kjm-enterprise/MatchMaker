@@ -25,25 +25,31 @@ import edu.cnm.deepdive.matchmaker.service.GoogleSignInService;
 
 
 /**
+ * Copyright 2019 KJM Enterprise
  *
- *Copyright 2019 KJM Enterprise
+ * Licensed under the Apache Licences Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the Licenses.
  *
- *Licensed under the Apache Licences Version 2.0 (the "License"); you may not use
- *this file except in compliance with the Licenses.
-
- *[Link To License](http://www.apache.org/licenses/LICENSE-2.0)
-
- *Unless required by applicable law or agreed to in writing, software distributed under the License
- *is distributed on an as is basis, without warranties or conditions of any kind, wither express or
- *implied. See the language governing permissions and limitations under the License.
-
+ * [Link To License](http://www.apache.org/licenses/LICENSE-2.0)
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an as is basis, without warranties or conditions of any kind, wither express or
+ * implied. See the language governing permissions and limitations under the License.
+ *
+ * @author Michael Sanchez, Kanyon Wyman and James Mattos
+ * @Version 1.0
+ * The <code>MainActivity</code> is the start of the entire application.  It calls different methods and
+ * allows them to launch by connecting them through the <code>MainActivity</code>
  */
-
 public class MainActivity extends AppCompatActivity {
 
   private static final String TAG = "MainActivity";
-  private TextView textMessage;
 
+
+  /**
+   * The <code>onNavigationItemSelected</code> method allows the app to launch the different fragments that
+   * are called through the app.
+   */
   private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener
       = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -71,7 +77,12 @@ public class MainActivity extends AppCompatActivity {
     }
   };
 
-
+  /**
+   * OnCreate starts the lifecycle of the app and inflates all of the needed XML files and calls the
+   * fragment manager to start the app in the apps home fragment.
+   *
+   * @param savedInstanceState saves the instance which the app creates.
+   */
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -87,10 +98,15 @@ public class MainActivity extends AppCompatActivity {
     transaction.add(R.id.fragment_container, fragmentFindSomeone, "find_someone");
     transaction.commit();
 
-    FirebaseInstanceId.getInstance().getToken();
 
   }
 
+  /**
+   * Initializes the fragments ability to be loaded in <code>onCreate</code>
+   *
+   * @param fragment the individual sections of the app.
+   * @param tag refers to the tag that the apps are referenced as in<code>onNavigationItemsSelected</code>
+   */
   public void loadFragment(Fragment fragment, String tag) {
     FragmentManager manager = getSupportFragmentManager();
     manager.beginTransaction()
@@ -98,6 +114,13 @@ public class MainActivity extends AppCompatActivity {
         .commit();
   }
 
+  /**
+   * This tells the compiler to inflate the options menu that sits atop the app.  It houses the
+   * signout feature.
+   *
+   * @param menu simply just a menu item
+   * @return returns true when obtaining the <code>onCreateOptionsMenu</code>
+   */
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     MenuInflater inflater = getMenuInflater();
@@ -105,6 +128,10 @@ public class MainActivity extends AppCompatActivity {
     return true;
   }
 
+  /**
+   * This tells the compiler how to handle <code>onCreateOptionsMenu</code> when an item is selected
+   * in the options menu.
+   */
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
     boolean handeled = true;
@@ -116,6 +143,10 @@ public class MainActivity extends AppCompatActivity {
     return handeled;
   }
 
+  /**
+   * WHen the item is selected this informs <code>GoogleSignInService</code> to create a new task
+   * and sign out.
+   */
   private void signOut() {
     GoogleSignInService.getInstance().getClient()
         .signOut()
@@ -127,7 +158,10 @@ public class MainActivity extends AppCompatActivity {
         }));
   }
 
-
+  /**
+   *  This method currently does nothing with the app.  However it will be used to generate a token between devices
+   *  to allow them to communicate together.
+   */
   public void onClick(View v) {
     // Get token
     // [START retrieve_current_token]
