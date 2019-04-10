@@ -104,7 +104,7 @@ another gamer (although this isn’t the intended purpose, but love happens)
 
 [DDL Placeholder]()
 
-[Front End JavaDoc Placeholder]()
+[Front End JavaDoc](docs/api)
 
 
 

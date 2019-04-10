@@ -1,8 +1,8 @@
-package edu.cnm.deepdive.matchmaker.model.entity.dao;
+package edu.cnm.deepdive.matchmaker.model.model.dao;
 
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
-import edu.cnm.deepdive.matchmaker.model.entity.User;
+import edu.cnm.deepdive.matchmaker.model.model.entity.User;
 import java.util.List;
 
 public interface userDao {

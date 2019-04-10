@@ -1,5 +1,5 @@
 edu.cnm.deepdive.matchmaker
 edu.cnm.deepdive.matchmaker.controller
-edu.cnm.deepdive.matchmaker.model.entity
-edu.cnm.deepdive.matchmaker.model.entity.dao
+edu.cnm.deepdive.matchmaker.model.model.dao
+edu.cnm.deepdive.matchmaker.model.model.entity
 edu.cnm.deepdive.matchmaker.service

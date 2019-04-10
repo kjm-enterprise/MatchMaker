@@ -1,9 +1,7 @@
-package edu.cnm.deepdive.matchmaker.model.entity;
+package edu.cnm.deepdive.matchmaker.model.model.entity;
 
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
 import android.media.Image;
-import android.support.annotation.NonNull;
 import java.util.UUID;
 import com.google.gson.annotations.Expose;
 

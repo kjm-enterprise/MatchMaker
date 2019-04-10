@@ -37,7 +37,7 @@ import edu.cnm.deepdive.matchmaker.service.GoogleSignInService;
  * implied. See the language governing permissions and limitations under the License.
  *
  * @author Michael Sanchez, Kanyon Wyman and James Mattos
- * @Version 1.0
+ * @version 1.0
  * The <code>MainActivity</code> is the start of the entire application.  It calls different methods and
  * allows them to launch by connecting them through the <code>MainActivity</code>
  */

@@ -1,8 +1,6 @@
-package edu.cnm.deepdive.matchmaker.model.entity;
+package edu.cnm.deepdive.matchmaker.model.model.entity;
 
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
 /**
  * The entity class for <code>UserDecision</code>.  This sets and gets the items that will be needed to be displayed
