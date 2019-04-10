@@ -7,6 +7,10 @@ import android.support.annotation.NonNull;
 import java.util.UUID;
 import com.google.gson.annotations.Expose;
 
+/**
+ * The entity class for <code>User</code>. This class sets and gets info to be sent to the Dao classes
+ * and accessed by the users.
+ */
 @Entity
 public class User {
 

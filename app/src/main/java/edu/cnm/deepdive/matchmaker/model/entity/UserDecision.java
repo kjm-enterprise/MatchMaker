@@ -4,6 +4,10 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+/**
+ * The entity class for <code>UserDecision</code>.  This sets and gets the items that will be needed to be displayed
+ * in the userDecisionDao Interface and sent to the user.
+ */
 @Entity
 public class UserDecision {
 

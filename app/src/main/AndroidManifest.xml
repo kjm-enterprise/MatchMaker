@@ -12,7 +12,8 @@
     android:name=".MMApplication">
     <activity
       android:label="@string/app_name"
-      android:name=".controller.MainActivity">
+      android:name=".controller.MainActivity"
+      android:screenOrientation="portrait">
 
     </activity>
     <activity android:name=".controller.LoginActivity">

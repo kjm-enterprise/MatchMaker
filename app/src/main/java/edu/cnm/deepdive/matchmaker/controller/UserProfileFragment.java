@@ -9,7 +9,13 @@ import edu.cnm.deepdive.matchmaker.R;
 
 public class UserProfileFragment extends Fragment {
 
-
+  /**
+   * <code>onCreateView</code> inflates the layout associated with the fragment.
+   * @param inflater inflates R.layout.fragment_matches
+   * @param container refers to the <code>fragment_container</code>
+   * @param savedInstanceState saves when the fragment is inflated and selected
+   * @return sets the layout to inflate.
+   */
 @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {
